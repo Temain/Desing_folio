@@ -1,0 +1,51 @@
+<div class="b-page__head">
+  <div class="b-head__logo">
+    <div class="b-creator">YANE NAUMOSKI</div>
+    <div class="b-logo">DESING FOLIO</div>
+  </div>
+  <div class="b-head__menu">
+    <nav class="b-menu">
+      <ul>
+        <li class="b-menu_item"><a class="b-item_link b-item_link_active" href="#">HOME</a></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">WORK</a></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">SERVICES</a></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">ABOUT AS</a></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">CONTACTS</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="b-head__slider">
+    <div class="carousel slide" id="myCarousel">
+      <ol class="carousel-indicators">
+        <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag("first_image.jpg") %>
+          <div class="carousel-caption">
+            <h4>Заголовок слайда</h4>
+            <p>Текст описания слайда</p>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("second_image.jpg") %>
+          <div class="carousel-caption">
+            <h4>Заголовок слайда</h4>
+            <p>Текст описания слайда</p>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("third_image.jpg") %>
+          <div class="carousel-caption">
+            <h4>Заголовок слайда</h4>
+            <p>Текст описания слайда</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control left" data-slide="prev" href="#myCarousel">&lsaquo;</a>
+      <a class="carousel-control right" data-slide="next" href="#myCarousel">&rsaquo;</a>
+    </div>
+  </div>
+</div>

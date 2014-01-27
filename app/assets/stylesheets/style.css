@@ -1,0 +1,132 @@
+/* fonts */
+
+@font-face { 
+  src:url("/fonts/Decade.ttf");
+  font-family: "Decade"; 
+} 
+
+.b-page {
+  width:960px;
+  margin:0 auto;
+  background: url(bg3.jpg) top left repeat-x;
+}
+
+/* Header */
+
+.b-page__head {
+  margin-top: 15px;
+}
+
+.b-head__logo {
+  display: inline-block;
+}
+
+.b-creator {
+  font-size: 11px;
+  font-family: "Arial";
+  text-transform: uppercase;
+  text-align: left;
+  color: #929292;
+}
+
+.b-logo {
+  font-size: 38px;
+  font-family: "Decade";
+  color: #c7ff66;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 0px 3px 2px rgb( 0, 0, 0 );
+}
+
+.b-head__menu {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+}
+
+.b-menu {
+  margin-top: -10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.b-menu_item {
+  display: inline-block;
+  list-style-position: inside;
+  border:1px dotted #515151;
+  padding: 8px 15px;
+  background-color: rgba( 0, 0, 0, 0.2 );
+  float: left;
+  margin-left: -1px;
+}
+
+.b-item_link {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Decade";
+  text-transform: uppercase;
+  color: #dcdcdc;
+}
+
+.b-item_link_active {
+  color: #c7ff66;
+}
+
+.b-menu_item a:active {
+  color: #c7ff66;
+}
+
+.b-menu_item a:hover {
+  text-decoration: none;
+  color: #c7ff66;
+}
+
+.b-head__slider {
+  background-color: rgba( 0, 0, 0, 0.2 );
+  border:1px dotted #515151;
+  width: 100%;
+  height: 306px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Content */
+.b-content__title {
+  border-bottom:1px dotted #515151;
+  text-align: left;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Decade";
+  text-transform: uppercase;
+  color: #c7ff66;
+  margin-top: 30px;
+}
+
+.b-content {
+  font-size: 12px;
+  font-family: "Tahoma";
+  color: rgb( 220, 219, 219 );
+  margin-top: 10px;
+}
+
+
+/* Footer */
+.b-page__footer {
+  height: 30px;
+  border-top: 1px dotted #515151;
+  border-bottom: 1px dotted #515151;
+  margin-top: 50px;
+}
+
+.b-footer__copyright {
+  font-size: 11px;
+  font-family: "Verdana";
+  color: rgb( 140, 140, 140 );
+  float: left;
+  margin-top: 5px;
+}
+
+.b-social__item {
+  float: right;
+  margin-left: 5px;
+  margin-top: 2px;
+}
