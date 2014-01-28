@@ -1,8 +1,10 @@
 /* fonts */
 
-@font-face { 
-  src:url("/fonts/Decade.ttf");
-  font-family: "Decade"; 
+@font-face {
+  src: url('/assets/fonts/Decade.ttf') format('truetype');
+  font-family: "Decade";
+  font-weight: normal;
+  font-style: normal;
 } 
 
 .b-page {

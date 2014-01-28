@@ -1,16 +1,16 @@
 <div class="b-page__head">
   <div class="b-head__logo">
-    <div class="b-creator">YANE NAUMOSKI</div>
-    <div class="b-logo">DESING FOLIO</div>
+    <div class="b-creator">starting point for</div>
+    <div class="b-logo">Dev Noobs</div>
   </div>
   <div class="b-head__menu">
     <nav class="b-menu">
       <ul>
-        <li class="b-menu_item"><a class="b-item_link b-item_link_active" href="#">HOME</a></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">WORK</a></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">SERVICES</a></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">ABOUT AS</a></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">CONTACTS</a></li>
+        <li class="b-menu_item"><%= link_to "HOME", home_path, remote: true, :class => "b-item_link b-item_link_active" %></li>
+        <li class="b-menu_item"><%= link_to "WORK", work_path, remote: true, :class => "b-item_link" %></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">ARTICLES</a></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">BOOKS</a></li>
+        <li class="b-menu_item"><a class="b-item_link" href="#">VIDEOS</a></li>
       </ul>
     </nav>
   </div>

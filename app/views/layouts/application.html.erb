@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Desing Folio</title>
+  <title>Dev Noobs</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag 'style' %>
-  <%= stylesheet_link_tag 'bootstrap.min' %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "bootstrap.min" %>
-  <%= javascript_include_tag "script" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="b-page">
-  <%= render 'layouts/header' %>
-
-  <%= yield %>
-
-  <%= render 'layouts/footer' %>
+    <%= yield %>
 </body>
 </html>
 

@@ -1,5 +1,8 @@
 DesingFolio::Application.routes.draw do
-  root to: 'static_pages#home'
+  root to: 'static_pages#index'
+
+  match '/home', to: 'static_pages#home', via: :get
+  match '/work', to: 'static_pages#work', via: :get
 
   #get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
