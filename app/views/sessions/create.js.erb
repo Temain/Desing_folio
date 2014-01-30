@@ -1,0 +1,5 @@
+<% if @authenticated %>
+    $(".b-page__content").html("<%= escape_javascript(render 'static_pages/home') %>")
+<% else %>
+    $(".b-page__content").html("<%= escape_javascript(render 'sessions/new') %>")
+<% end %>

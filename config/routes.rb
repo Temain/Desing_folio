@@ -1,9 +1,14 @@
 DesingFolio::Application.routes.draw do
-  resources :users
   root to: 'static_pages#index'
+
+  resources :users
+  resources :sessions, only: [ :new, :create, :destroy ]
 
   match '/home', to: 'static_pages#home', via: :get
   match '/work', to: 'static_pages#work', via: :get
+  match '/signup', to: 'users#new', via: :get
+  match '/signin', to: 'sessions#create', via: :get
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   #get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -5,7 +5,9 @@
   </div>
   <div class="b-head__menu">
     <div class="b-menu__profile">
-      <a><%= link_to "Registration", new_user_path, remote: true, :class => "" %></a>
+      <%= link_to "Log in", new_session_path, remote: true, :class => "" %>
+      or
+      <%= link_to "Sign up", new_user_path, remote: true, :class => "" %>
     </div>
     <nav class="b-menu">
       <ul>

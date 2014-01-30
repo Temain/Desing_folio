@@ -28,4 +28,7 @@
       <primary-key columns="id"/>
     </table>
   </data-source>
+  <data-source source="LOCAL" name="Rails Desing_folio: production" uuid="8f0859b2-1028-4aab-9516-3906c0b9ccb4">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
