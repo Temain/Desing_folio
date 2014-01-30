@@ -1,134 +1,236 @@
 /* fonts */
 
 @font-face {
-  src: url('/assets/fonts/Decade.ttf') format('truetype');
-  font-family: "Decade";
-  font-weight: normal;
-  font-style: normal;
-} 
+    src: url('/assets/fonts/Decade.ttf') format('truetype');
+    font-family: "Decade";
+    font-weight: normal;
+    font-style: normal;
+}
 
 .b-page {
-  width:960px;
-  margin:0 auto;
-  background: url(bg3.jpg) top left repeat-x;
+    width: 960px;
+    margin: 0 auto;
+    background: url(bg3.jpg) top left repeat-x;
 }
 
 /* Header */
 
 .b-page__head {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .b-head__logo {
-  display: inline-block;
+    display: inline-block;
 }
 
 .b-creator {
-  font-size: 11px;
-  font-family: "Arial";
-  text-transform: uppercase;
-  text-align: left;
-  color: #929292;
+    font-size: 11px;
+    font-family: "Arial";
+    text-transform: uppercase;
+    text-align: left;
+    color: #929292;
+}
+
+.b-menu__profile {
+    font-size: 11px;
+    font-family: "Arial";
+    text-transform: uppercase;
+    text-align: right;
+    color: #929292;
+    margin-bottom: 16px;
 }
 
 .b-logo {
-  font-size: 38px;
-  font-family: "Decade";
-  color: #c7ff66;
-  text-transform: uppercase;
-  text-align: left;
-  text-shadow: 0px 3px 2px rgb( 0, 0, 0 );
+    font-size: 38px;
+    font-family: "Decade";
+    color: #c7ff66;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 0px 3px 2px rgb(0, 0, 0);
 }
 
 .b-head__menu {
-  display: inline-block;
-  float: right;
-  margin-top: 15px;
+    display: inline-block;
+    float: right;
+    /*margin-top: 15px;*/
 }
 
 .b-menu {
-  margin-top: -10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: -10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .b-menu_item {
-  display: inline-block;
-  list-style-position: inside;
-  border:1px dotted #515151;
-  padding: 8px 15px;
-  background-color: rgba( 0, 0, 0, 0.2 );
-  float: left;
-  margin-left: -1px;
+    display: inline-block;
+    list-style-position: inside;
+    border: 1px dotted #515151;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-left: -1px;
 }
 
 .b-item_link {
-  text-decoration: none;
-  font-size: 16px;
-  font-family: "Decade";
-  text-transform: uppercase;
-  color: #dcdcdc;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Decade";
+    text-transform: uppercase;
+    color: #dcdcdc;
 }
 
 .b-item_link_active {
-  color: #c7ff66;
+    color: #c7ff66;
 }
 
 .b-menu_item a:active {
-  color: #c7ff66;
+    color: #c7ff66;
 }
 
 .b-menu_item a:hover {
-  text-decoration: none;
-  color: #c7ff66;
+    text-decoration: none;
+    color: #c7ff66;
 }
 
 .b-head__slider {
-  background-color: rgba( 0, 0, 0, 0.2 );
-  border:1px dotted #515151;
-  width: 100%;
-  height: 306px;
-  margin-top: 50px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px dotted #515151;
+    width: 100%;
+    height: 306px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Content */
 .b-content__title {
-  border-bottom:1px dotted #515151;
-  text-align: left;
-  text-decoration: none;
-  font-size: 32px;
-  font-family: "Decade";
-  text-transform: uppercase;
-  color: #c7ff66;
-  margin-top: 30px;
+    border-bottom: 1px dotted #515151;
+    text-align: left;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: "Decade";
+    text-transform: uppercase;
+    color: #c7ff66;
+    margin-top: 30px;
 }
 
 .b-content {
-  font-size: 12px;
-  font-family: "Tahoma";
-  color: rgb( 220, 219, 219 );
-  margin-top: 10px;
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: rgb(220, 219, 219);
+    margin-top: 10px;
+}
+
+.b-content__message {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: #c7ff66;
+    height: 30px;
+    border-top: 1px dotted #515151;
+    padding-top: 30px;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.b-content__flash {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: #c7ff66;
+    height: 30px;
+    border-top: 1px dotted #515151;
+    border-bottom: 1px dotted #515151;
+    margin-top: 10px;
+    clear: both;
 }
 
 
 /* Footer */
 .b-page__footer {
-  height: 30px;
-  border-top: 1px dotted #515151;
-  border-bottom: 1px dotted #515151;
-  margin-top: 50px;
+    height: 30px;
+    border-top: 1px dotted #515151;
+    border-bottom: 1px dotted #515151;
+    margin-top: 50px;
+    clear: both;
 }
 
 .b-footer__copyright {
-  font-size: 11px;
-  font-family: "Verdana";
-  color: rgb( 140, 140, 140 );
-  float: left;
-  margin-top: 5px;
+    font-size: 11px;
+    font-family: "Verdana";
+    color: rgb(140, 140, 140);
+    float: left;
+    margin-top: 5px;
 }
 
 .b-social__item {
-  float: right;
-  margin-left: 5px;
-  margin-top: 2px;
+    float: right;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+/* Registration form */
+.b-form {
+    /*width: 600px;
+    margin: 0 auto;*/
+    float: left;
+    margin-top: 20px;
+}
+
+.b-form__field {
+    clear: both;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.b-field__label {
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Tahoma";
+    color: rgb( 199, 255, 102 );
+    text-align: left;
+    margin-right: 8px;
+    margin-top: 12px;
+}
+
+.b-field__text-field {
+    background-color: rgba( 232, 232, 232, 0.2 );
+    width: 224px;
+    height: 39px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: #dcdcdc;
+    border: 1px dotted #515151;
+    padding-left: 5px;
+}
+
+.b-form__submit {
+    background-color: #c7ff66;
+    height: 36px;
+    border:none;
+    padding: 5px 10px;
+}
+
+.b-form__submit-text {
+    font-size: 20px;
+    font-family: "Decade";
+    text-align: left;
+    color: #5b7135;
+}
+
+.b-errors {
+    margin-top: 20px;
+}
+
+.b-errors__item {
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: red;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 0px 3px 2px rgb(0, 0, 0);
+}
+
+.field_with_errors {
+    color: #f00;
 }

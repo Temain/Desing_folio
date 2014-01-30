@@ -1,0 +1,6 @@
+<% if @saved %>
+    //$(".b-page__content").html("<%= escape_javascript(render 'static_pages/home') %>")
+    $(".b-page__content").html("<div class='b-content__message'>Registration was successful. Thank you for registering on our site.</div>");
+<% else %>
+    $(".b-page__content").html("<%= escape_javascript(render 'users/new') %>")
+<% end %>

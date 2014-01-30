@@ -10,7 +10,6 @@ class StaticPagesController < ApplicationController
   end
 
   def work
-    @my_data = 1
     respond_to do |format|
       format.js
     end

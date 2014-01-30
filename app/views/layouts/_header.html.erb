@@ -4,6 +4,9 @@
     <div class="b-logo">Dev Noobs</div>
   </div>
   <div class="b-head__menu">
+    <div class="b-menu__profile">
+      <a><%= link_to "Registration", new_user_path, remote: true, :class => "" %></a>
+    </div>
     <nav class="b-menu">
       <ul>
         <li class="b-menu_item"><%= link_to "HOME", home_path, remote: true, :class => "b-item_link b-item_link_active" %></li>

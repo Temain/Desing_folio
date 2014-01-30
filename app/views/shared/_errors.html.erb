@@ -1,0 +1,7 @@
+<div class="b-errors">
+    <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |msg| %>
+            <li class="b-errors__item"><%= msg %></li>
+        <% end %>
+    <% end %>
+</div>

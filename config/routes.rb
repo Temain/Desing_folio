@@ -1,4 +1,5 @@
 DesingFolio::Application.routes.draw do
+  resources :users
   root to: 'static_pages#index'
 
   match '/home', to: 'static_pages#home', via: :get
