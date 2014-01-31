@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     @authenticated = user && user.authenticate(params[:session][:password])
     if @authenticated
+      sign_in(user)
     else
       flash.now[:error] = 'Invalid email/password combination'
     end
