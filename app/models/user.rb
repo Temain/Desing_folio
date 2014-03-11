@@ -7,13 +7,14 @@
 #  email           :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
-#  role_id         :integer
 #  password_digest :string(255)
-#  remeber_token   :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base
-  belongs_to :roles
+  has_many :microposts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   before_create :create_remember_token
   before_save{ self.email = email.downcase }

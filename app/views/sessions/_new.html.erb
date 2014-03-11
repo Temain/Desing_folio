@@ -1,8 +1,8 @@
-<div class="b-content__title">
-  Sign in
+<div class="b-content__header">
+  <div class="b-content__title">Log in</div>
 </div>
-<%= render 'shared/errors_flash' %>
-<div class="b-form">
+<div class="b-form login">
+  <%= render 'shared/errors_flash' %>
   <%= form_for(:session, url: sessions_path, remote: true) do |f| %>
       <div class="b-form__field">
         <%= f.label :email, "Email:", class: "b-field__label" %>
@@ -15,9 +15,9 @@
       </div>
 
       <div class="b-form__field">
-        <%= f.submit "Sign in", class: "b-form__submit b-form__submit-text" %>
+        <%= f.submit "Log in", class: "b-form__submit b-form__submit-text" %>
       </div>
   <% end %>
 
-  <p>New user? <%= link_to "Sign up now!", signup_path, remote: true %></p>
+  <!-- <p>New user? <%= link_to "Sign up now!", signup_path, remote: true %></p> -->
 </div>

@@ -1,0 +1,4 @@
+<% unless signed_in? %>
+$(".b-menu__profile").html("<div><%= escape_javascript(link_to "Log in", signin_path, remote: true, :class => "") %>" +
+  " or <%= escape_javascript(link_to "Sign up", signup_path, remote: true, :class => "") %></div>");
+<% end %>

@@ -7,6 +7,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/assets/fonts/glyphicons-halflings-regular.eot');
+    src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
 .b-page {
     width: 960px;
     margin: 0 auto;
@@ -60,7 +66,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.b-menu_item {
+.b-menu__item {
     display: inline-block;
     list-style-position: inside;
     border: 1px dotted #515151;
@@ -70,7 +76,7 @@
     margin-left: -1px;
 }
 
-.b-item_link {
+.b-item__link {
     text-decoration: none;
     font-size: 16px;
     font-family: "Decade";
@@ -78,15 +84,15 @@
     color: #dcdcdc;
 }
 
-.b-item_link_active {
+.b-item__link_active {
     color: #c7ff66;
 }
 
-.b-menu_item a:active {
+.b-menu__item a:active {
     color: #c7ff66;
 }
 
-.b-menu_item a:hover {
+.b-menu__item a:hover {
     text-decoration: none;
     color: #c7ff66;
 }
@@ -96,27 +102,68 @@
     border: 1px dotted #515151;
     width: 100%;
     height: 306px;
-    margin-top: 50px;
+    margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.carousel-caption__text {
+    font-size: 30px;
+    font-family: "Decade";
+}
+
 /* Content */
-.b-content__title {
+
+.b-content__header {
     border-bottom: 1px dotted #515151;
+    margin-top: 30px;
+}
+
+.b-content__title {
+    display: inline-block;
     text-align: left;
     text-decoration: none;
     font-size: 32px;
     font-family: "Decade";
     text-transform: uppercase;
     color: #c7ff66;
-    margin-top: 30px;
+}
+
+input:focus::-webkit-input-placeholder
+{
+    color: transparent;
+}
+
+.b-content__search-form {
+    display: inline-block;
+    float: right;
+}
+
+.b-content__search-icon {
+    color: #cccccc;
+    left: 295px;
+}
+
+.b-content__search-field {
+    background-color: rgba( 232, 232, 232, 0.2 );
+    width: 300px;
+    height: 39px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: #dcdcdc;
+    border: 1px dotted #6B6969;
+    padding-left: 5px;
+}
+
+.b-title__link {
+    font-size: 14px;
 }
 
 .b-content {
     font-size: 12px;
     font-family: "Tahoma";
     color: rgb(220, 219, 219);
-    margin-top: 10px;
+    /*margin-top: 10px;*/
 }
 
 .b-content__message {
@@ -149,7 +196,7 @@
     height: 30px;
     border-top: 1px dotted #515151;
     border-bottom: 1px dotted #515151;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     clear: both;
 }
 
@@ -167,12 +214,20 @@
     margin-top: 2px;
 }
 
-/* Registration form */
+/* Form */
+
 .b-form {
-    /*width: 600px;
-    margin: 0 auto;*/
-    float: left;
+    margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.b-form.login {
+    width: 300px;
+}
+
+.b-form.edit {
+    width: 600px;
 }
 
 .b-form__field {
@@ -194,14 +249,32 @@
 
 .b-field__text-field {
     background-color: rgba( 232, 232, 232, 0.2 );
-    width: 224px;
+    /*width: 224px;*/
+    width: 100%;
     height: 39px;
     text-decoration: none;
     font-size: 12px;
     font-family: "Tahoma";
     color: #dcdcdc;
-    border: 1px dotted #515151;
+    border: 1px dotted #6B6969;
     padding-left: 5px;
+}
+
+.b-field__text-area {
+    background-color: rgba( 232, 232, 232, 0.2 );
+    width: 100%;
+    height: 100px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Tahoma";
+    color: #dcdcdc;
+    border: 1px dotted #6B6969;
+    padding-left: 5px;
+}
+
+.field_with_errors .b-field__text-field,
+.field_with_errors .b-field__text-area {
+    border: 1px dotted red;
 }
 
 .b-form__submit {
@@ -225,7 +298,7 @@
 .b-errors__item {
     font-size: 12px;
     font-family: "Tahoma";
-    color: red;
+    color: rgb(245, 15, 15);
     text-transform: uppercase;
     text-align: left;
     text-shadow: 0px 3px 2px rgb(0, 0, 0);
@@ -233,4 +306,157 @@
 
 .field_with_errors {
     color: #f00;
+}
+
+
+/* pagination */
+
+.pagination {
+    /*float: left;*/
+}
+
+.pagination ul {
+    padding: 0px;
+}
+
+.pagination ul > li {
+    display: inline-block;
+    list-style-position: inside;
+    border: 1px dotted #515151;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-left: -1px;
+    width: 46px;
+    text-align: center;
+}
+
+.disabled {
+    display: none !important;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.active a {
+    color: #cccccc;
+}
+
+.next_page, .previous_page {
+    text-align: center;
+}
+
+/* Show all microposts */
+
+.b-content__empty {
+    font-size: 16px;
+    margin: 30px 0px;
+}
+
+.b-content__item {
+    /*clear: both;*/
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.b-item {
+    margin-left: 130px;
+}
+
+.b-item__title {
+    font-size: 20px;
+}
+
+.b-item__content {
+    /*border-top: 1px dotted #515151;*/
+    font-size: 14px;
+}
+
+.b-item__timestamp {
+    float: left;
+    font-size: 10px;
+    width: 125px;
+}
+
+.b-timestamp__day-month {
+    font-size: 18px;
+}
+
+.b-timestamp__year {
+    float:right;
+    font-size:12px;
+    margin-right: 25px;
+}
+
+.b-item__back {
+
+}
+
+.b-item__footer {
+    margin: 5px 0px;
+}
+
+.b-item__footer_right {
+    float: right;
+}
+
+.b-item__footer-icon {
+    /*margin-right: 2px;*/
+}
+
+.b-item__comments {
+    margin-top: 25px;
+}
+
+.b-item__comments-icon {
+    float: left;
+    margin-right: 3px;
+}
+
+/* Show one micropost */
+
+.b-content__text {
+    margin: 20px 0px;
+    font-size: 14px;
+}
+
+.b-comment {
+    margin: 25px 0px;
+}
+
+.b-comment__body {
+    margin:10px 0px;
+}
+
+.b-comment__username {
+    font-size: 14px;
+    vertical-align: baseline;
+}
+
+.b-comment__footer_right {
+    float: right;
+}
+
+.b-comment__created_at {
+    font-size: 10px;
+    vertical-align: baseline;
+    margin-left: 5px;
+}
+
+
+/* Show user */
+
+.b-content__user {
+    margin: 30px 0px;
+}
+
+.b-content__user_gravatar {
+    display: inline-block
+}
+
+.b-content__user_info {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
 }

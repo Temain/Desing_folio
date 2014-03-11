@@ -4,18 +4,23 @@
     <div class="b-logo">Dev Noobs</div>
   </div>
   <div class="b-head__menu">
-    <div class="b-menu__profile">
-      <%= link_to "Log in", new_session_path, remote: true, :class => "" %>
-      or
-      <%= link_to "Sign up", new_user_path, remote: true, :class => "" %>
-    </div>
+        <div class="b-menu__profile">
+          <% if signed_in? %>
+             Welcome, <%= link_to @current_user.name, @current_user, remote: true %> |
+             <%= link_to "Log out", signout_path, method: 'delete', remote: true, :class => "" %>
+          <% else %>
+             <%= link_to "Log in", signin_path, remote: true, :class => "" %>
+             or
+             <%= link_to "Sign up", signup_path, remote: true, :class => "" %>
+          <% end %>
+        </div>
     <nav class="b-menu">
       <ul>
-        <li class="b-menu_item"><%= link_to "HOME", home_path, remote: true, :class => "b-item_link b-item_link_active" %></li>
-        <li class="b-menu_item"><%= link_to "WORK", work_path, remote: true, :class => "b-item_link" %></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">ARTICLES</a></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">BOOKS</a></li>
-        <li class="b-menu_item"><a class="b-item_link" href="#">VIDEOS</a></li>
+        <li class="b-menu__item"><%= link_to "HOME", microposts_path, remote: true, :class => "b-item__link b-item__link_active" %></li>
+        <li class="b-menu__item"><%= link_to "WORK", "#", remote: true, :class => "b-item__link" %></li>
+        <li class="b-menu__item"><a class="b-item__link" href="#">ARTICLES</a></li>
+        <li class="b-menu__item"><a class="b-item__link" href="#">BOOKS</a></li>
+        <li class="b-menu__item"><a class="b-item__link" href="#">VIDEOS</a></li>
       </ul>
     </nav>
   </div>
@@ -28,24 +33,24 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag("first_image.jpg") %>
+          <%= image_tag("java_img.jpg") %>
           <div class="carousel-caption">
-            <h4>Заголовок слайда</h4>
-            <p>Текст описания слайда</p>
+            <h4 class="carousel-caption__text">Bla bla bla...</h4>
+            <!-- <p>Текст описания слайда</p> -->
           </div>
         </div>
         <div class="item">
-          <%= image_tag("second_image.jpg") %>
+          <%= image_tag("ruby_img.jpg") %>
           <div class="carousel-caption">
-            <h4>Заголовок слайда</h4>
-            <p>Текст описания слайда</p>
+            <h4 class="carousel-caption__text">O, bla bla bla...</h4>
+            <!-- <p>Текст описания слайда</p> -->
           </div>
         </div>
         <div class="item">
-          <%= image_tag("third_image.jpg") %>
+          <%= image_tag("net_img.jpg") %>
           <div class="carousel-caption">
-            <h4>Заголовок слайда</h4>
-            <p>Текст описания слайда</p>
+            <h4 class="carousel-caption__text">And bla bla.</h4>
+            <!-- <p>Текст описания слайда</p> -->
           </div>
         </div>
       </div>

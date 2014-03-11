@@ -1,16 +1,16 @@
 DesingFolio::Application.routes.draw do
-  root to: 'static_pages#index'
 
+  root to: 'microposts#index'
+  resources :microposts
   resources :users
   resources :sessions, only: [ :new, :create, :destroy ]
 
-  match '/home', to: 'static_pages#home', via: :get
-  match '/work', to: 'static_pages#work', via: :get
   match '/signup', to: 'users#new', via: :get
-  match '/signin', to: 'sessions#create', via: :get
+  match '/signin', to: 'sessions#new', via: :get
   match '/signout', to: 'sessions#destroy', via: :delete
+  match '/microposts/:id/add_comment', to: 'microposts#add_comment', via: :post
+  match '/microposts/:id/delete_comment/:comment_id', to: 'microposts#delete_comment', as: :delete_comment, via: :delete
 
-  #get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

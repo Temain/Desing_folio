@@ -1,0 +1,24 @@
+<div class="b-content__header">
+  <div class="b-content__title">Noob posts</div>
+  <% if signed_in? %>
+    <%= link_to 'new post', new_micropost_path, class: 'b-title__link', remote: true %>
+  <% end %>
+  <div class="b-content__search-form">
+      <%= form_tag microposts_path, method: :get, remote: true do %>
+        <i class="b-content__search-icon glyphicon glyphicon-search"></i>
+        <%= search_field_tag 'search', @search_term, placeholder: 'Enter search term...', class: 'b-content__search-field' %>
+      <% end %>
+  </div>
+</div>
+<div class="b-content">
+  <% if @microposts.any? %>
+      <div class="b-content__list">
+        <%= render @microposts %>
+      </div>
+      <div class="b-content__paginate">
+        <%= will_paginate @microposts,  previous_label: h('<<'), next_label: h('>>') %>
+      </div>
+  <% else %>
+      <div class="b-content__empty">Oops, but nothing to show T_T</div>
+  <% end %>
+</div>
