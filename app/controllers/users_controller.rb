@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /users/new
@@ -25,21 +28,11 @@ class UsersController < ApplicationController
   end
 
   # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.role_id = 1;
-
-    respond_to do |format|
-      @saved = @user.save
-      format.js
-     # if @user.save
-        #flash[:success] = "Welcome =)";
-        #format.js
-     # else
-        #format.html { render action: 'new' }
-        #format.json { render json: @user.errors, status: :unprocessable_entity }
-     # end
+    if @user.save
+      sign_in(@user)
+      render :js => "window.location = '/'"
     end
   end
 
@@ -68,6 +61,10 @@ class UsersController < ApplicationController
   end
 
   private
+    def signed_in_user
+      redirect_to signin_path, notice: "Please sign in." unless signed_in?
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])

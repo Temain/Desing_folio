@@ -1,0 +1,15 @@
+<div class="b-content__header">
+  <div class="b-content__title"><%= @user.name %></div>
+</div>
+<div class="b-content">
+  <div class="b-content__user">
+      <div class="b-content__user_gravatar">
+        <%= gravatar_for @user, size: 200 %>
+      </div>
+      <div class="b-content__user_info">
+        <div>Email: <%= @user.email %></div>
+        <div>Date of registration: <%= @user.created_at.strftime("%d %B %Y") %></div>
+        <div>He is <strong>God</strong>?: <%= he_is_god? @user %></div>
+      </div>
+  </div>
+</div>

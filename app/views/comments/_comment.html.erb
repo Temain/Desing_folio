@@ -1,0 +1,17 @@
+<div class="b-comment">
+  <div class="b-comment__title">
+    <%= gravatar_for comment.user %>
+    <span class="b-comment__username"><%= link_to comment.user.name, comment.user %>,</span>
+    <span class="b-comment__created_at"><%= comment.created_at.strftime("%d %B %Y %H:%M") %></span>
+  </div>
+  <div class="b-comment__body">
+    <%= comment.body %>
+  </div>
+  <div class="b-comment__footer">
+    <% if admin? %>
+        <div class="b-comment__footer_right">
+            <%= link_to 'Delete', delete_comment_path(id: comment.commentable.id, comment_id: comment.id), method: :delete, remote: true %>
+        </div>
+    <% end %>
+  </div>
+</div>

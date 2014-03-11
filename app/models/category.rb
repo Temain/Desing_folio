@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: roles
+# Table name: categories
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
@@ -8,8 +8,8 @@
 #  updated_at :datetime
 #
 
-class Role < ActiveRecord::Base
-  has_many :users
+class Category < ActiveRecord::Base
+  has_and_belongs_to_many :microposts
 
   validates :name, presence: true, length: { maximum: 16 }
 end

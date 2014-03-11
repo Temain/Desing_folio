@@ -1,0 +1,23 @@
+<div class="b-content__item">
+  <div class="b-item__timestamp">
+    <div class="b-timestamp__day-month"><%= micropost.created_at.strftime('%d %B') %></div>
+    <div class="b-timestamp__year"><%= micropost.created_at.strftime('%Y') %></div>
+  </div>
+  <div class="b-item">
+      <div class="b-item__title"><%= link_to micropost.title, micropost, remote: true %></div>
+      <div class="b-item__content"><%= micropost.content %></div>
+  </div>
+  <div class="b-item__footer">
+    <div class="b-item__footer_right">
+    <% if post_of_current_user_or_current_user_admin? micropost %>
+        <%= link_to 'Delete', micropost, method: :delete, remote: true  %> |
+        <%= link_to 'Edit', edit_micropost_path(micropost), remote: true %> |
+    <% end %>
+    <i class="b-item__footer-icon glyphicon glyphicon-comment"></i>
+      <%= link_to micropost.comments.count, micropost_path(micropost, anchor: 'comments'), remote: true %> |
+
+    Posted by <i class="b-item__footer-icon glyphicon glyphicon-user"></i>
+      <%= link_to micropost.user.name, micropost.user, remote: true %>
+    </div>
+  </div>
+</div>

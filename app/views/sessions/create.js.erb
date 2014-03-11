@@ -1,5 +1,6 @@
-<% if @authenticated %>
-    $(".b-page__content").html("<%= escape_javascript(render 'static_pages/home') %>")
+<% if signed_in? %>
+    $(".b-menu__profile").html("<div>Welcome, <%= @current_user.name %> " +
+        "<%= escape_javascript(link_to "Log out", signout_path, method: 'delete', remote: true, :class => "") %></div>");
 <% else %>
     $(".b-page__content").html("<%= escape_javascript(render 'sessions/new') %>")
 <% end %>
