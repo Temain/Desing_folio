@@ -5,7 +5,7 @@
   <% end %>
   <div class="b-content__search-form">
       <%= form_tag microposts_path, method: :get, remote: true do %>
-        <i class="b-content__search-icon glyphicon glyphicon-search"></i>
+        <button type="submit" class="b-content__search-button glyphicon glyphicon-search"></button>
         <%= search_field_tag 'search', @search_term, placeholder: 'Enter search term...', class: 'b-content__search-field' %>
       <% end %>
   </div>

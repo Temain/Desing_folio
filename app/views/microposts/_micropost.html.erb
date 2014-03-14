@@ -5,19 +5,24 @@
   </div>
   <div class="b-item">
       <div class="b-item__title"><%= link_to micropost.title, micropost, remote: true %></div>
-      <div class="b-item__content"><%= micropost.content %></div>
+      <div class="b-item__categories">
+        <!-- <i class="glyphicon glyphicon-briefcase"></i> -->
+        <%= micropost_categories(micropost) %>
+      </div>
+      <div class="b-item__content"><%= truncate(strip_tags(micropost.content), length: 500) %></div>
   </div>
   <div class="b-item__footer">
     <div class="b-item__footer_right">
-    <% if post_of_current_user_or_current_user_admin? micropost %>
-        <%= link_to 'Delete', micropost, method: :delete, remote: true  %> |
-        <%= link_to 'Edit', edit_micropost_path(micropost), remote: true %> |
-    <% end %>
-    <i class="b-item__footer-icon glyphicon glyphicon-comment"></i>
-      <%= link_to micropost.comments.count, micropost_path(micropost, anchor: 'comments'), remote: true %> |
+        <% if post_of_current_user_or_current_user_admin? micropost %>
+            <%= link_to 'Delete', micropost, method: :delete, remote: true %> |
+            <%= link_to 'Edit', edit_micropost_path(micropost), remote: true %> |
+        <% end %>
 
-    Posted by <i class="b-item__footer-icon glyphicon glyphicon-user"></i>
-      <%= link_to micropost.user.name, micropost.user, remote: true %>
+        <i class="b-item__footer-icon glyphicon glyphicon-comment"></i>
+        <%= link_to micropost.comments.count, micropost_path(micropost, anchor: 'comments'), remote: true %> |
+
+        Posted by <i class="b-item__footer-icon glyphicon glyphicon-user"></i>
+        <%= link_to micropost.user.name, micropost.user, remote: true %>
     </div>
   </div>
 </div>

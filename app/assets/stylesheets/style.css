@@ -143,6 +143,15 @@ input:focus::-webkit-input-placeholder
     left: 295px;
 }
 
+.b-content__search-button {
+    color: #cccccc;
+    left: 295px;
+    background: transparent;
+    width: 24px !important;
+    height: 24px;
+    border: none;
+}
+
 .b-content__search-field {
     background-color: rgba( 232, 232, 232, 0.2 );
     width: 300px;
@@ -236,6 +245,27 @@ input:focus::-webkit-input-placeholder
     margin-bottom: 10px;
 }
 
+.b-form__checkboxes-label {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Tahoma";
+    color: rgb( 199, 255, 102 );
+    text-align: left;
+    margin-right: 8px;
+    margin-top: 12px;
+}
+
+.b-form__checkbox {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.b-form__checkbox-flag {
+    color: #dcdcdc;
+    border: 1px dotted #6B6969;
+    padding-left: 5px;
+}
+
 .b-field__label {
     float: left;
     font-size: 12px;
@@ -263,13 +293,17 @@ input:focus::-webkit-input-placeholder
 .b-field__text-area {
     background-color: rgba( 232, 232, 232, 0.2 );
     width: 100%;
-    height: 100px;
+    height: 350px;
     text-decoration: none;
     font-size: 12px;
     font-family: "Tahoma";
     color: #dcdcdc;
     border: 1px dotted #6B6969;
     padding-left: 5px;
+}
+
+.b-field__text-area.small {
+    height: 100px;
 }
 
 .field_with_errors .b-field__text-field,
@@ -365,7 +399,19 @@ input:focus::-webkit-input-placeholder
 }
 
 .b-item__title {
-    font-size: 20px;
+    font-size: 24px;
+}
+
+.b-item__categories,
+.b-content__categories {
+    font-size: 14px;
+    margin: 10px 0px;
+    color: #cccccc;
+}
+
+.b-item__categories > a,
+.b-content__categories > a {
+    margin-left: 3px;
 }
 
 .b-item__content {
@@ -380,17 +426,13 @@ input:focus::-webkit-input-placeholder
 }
 
 .b-timestamp__day-month {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .b-timestamp__year {
-    float:right;
-    font-size:12px;
+    float: right;
+    font-size: 12px;
     margin-right: 25px;
-}
-
-.b-item__back {
-
 }
 
 .b-item__footer {
@@ -459,4 +501,49 @@ input:focus::-webkit-input-placeholder
     display: inline-block;
     font-size: 14px;
     margin-left: 10px;
+}
+
+.pictonic-icon {
+    font-size: 20px;
+}
+
+/* Monster */
+.monster {
+    background: white;
+    width: 5px;
+    height: 5px;
+    margin-top:18px;
+    position: relative;
+    -webkit-animation: fly 30s linear infinite normal 1s;
+}
+@-webkit-keyframes fly{
+    0% {
+        top: 300px;
+        left: 2px;
+        /*-webkit-transform:scale(1) rotate(0deg);*/
+    }
+    5% {
+        top: 200px;
+        left: 150px;
+    }
+    6% {
+        top: 150px;
+        left: 175px;
+    }7% {
+        top: 100px;
+        left: 150px;
+    }
+    8% {
+        top: 150px;
+        left: 100px;
+    }
+    10% {
+        top: 250px;
+        left: 200px;
+    }
+    100% {
+        top: 100px;
+        left: 960px;
+        /*-webkit-transform: scale(1) rotate(360deg);*/
+    }
 }

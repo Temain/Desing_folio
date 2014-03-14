@@ -1,11 +1,11 @@
 <div class="b-comment">
   <div class="b-comment__title">
     <%= gravatar_for comment.user %>
-    <span class="b-comment__username"><%= link_to comment.user.name, comment.user %>,</span>
+    <span class="b-comment__username"><%= link_to comment.user.name, comment.user, remote: true %>,</span>
     <span class="b-comment__created_at"><%= comment.created_at.strftime("%d %B %Y %H:%M") %></span>
   </div>
   <div class="b-comment__body">
-    <%= comment.body %>
+    <%= strip_tags(comment.body) %>
   </div>
   <div class="b-comment__footer">
     <% if admin? %>

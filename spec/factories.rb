@@ -4,7 +4,6 @@ FactoryGirl.define do
     email    "michael@example.com"
     password "foobar"
     password_confirmation "foobar"
-    role_id 1
   end
 
   factory :micropost do

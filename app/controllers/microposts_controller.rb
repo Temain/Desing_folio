@@ -5,8 +5,14 @@ class MicropostsController < ApplicationController
 
   # GET /microposts
   def index
-    @search_term = params[:search]
-    @microposts = Micropost.search(@search_term).includes(:user).paginate(page: params[:page], per_page: 5)
+    @category = Category.find(params[:category]) unless params[:category].nil?
+    @microposts = if @category
+      @category.microposts
+    else
+      Micropost.search(params[:search])
+    end
+
+    @microposts = @microposts.includes(:user).paginate(page: params[:page], per_page: 5)
     if request.xhr?
       respond_to do |format|
         format.js
@@ -24,10 +30,12 @@ class MicropostsController < ApplicationController
   # GET /microposts/new
   def new
     @micropost = Micropost.new
+    @categories = Category.all
   end
 
   # GET /microposts/1/edit
   def edit
+    @categories = Category.all
     respond_to do |format|
       format.js
     end
@@ -101,7 +109,7 @@ class MicropostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
-      params.require(:micropost).permit(:title, :content)
+      params.require(:micropost).permit(:title, :content, :category_ids => [])
     end
 
     def comment_params
