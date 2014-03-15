@@ -40,6 +40,9 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate', '0.0.9'
 
+# Voting functional
+gem 'acts_as_votable', '~> 0.8.0'
+
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'

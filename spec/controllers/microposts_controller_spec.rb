@@ -20,30 +20,27 @@ require 'spec_helper'
 
 describe MicropostsController do
 
+  let(:user) { FactoryGirl.create(:user) }
   # This should return the minimal set of attributes required to create a valid
   # Micropost. As you add validations to Micropost, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "content" => "MyString" } }
+  let(:valid_attributes) { { "content" => "MyString", "user" => user, "title" => "MyTitle" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # MicropostsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET index" do
+  describe ".index" do
     it "assigns all microposts as @microposts" do
-      micropost = Micropost.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:microposts).should eq([micropost])
+      xhr :get, :index
+      assigns(:microposts).should_not be_empty
+      expect(response).to render_template 'index'
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested micropost as @micropost" do
-      micropost = Micropost.create! valid_attributes
-      get :show, {:id => micropost.to_param}, valid_session
-      assigns(:micropost).should eq(micropost)
-    end
+  describe ".show" do
+    it "assigns the requested micropost as @micropost"
   end
 
   describe "GET new" do
